@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rakunhub Giriş</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="beat.mp3" type="audio/mpeg">
+  </audio>
+  <div class="background">
+    <img src="anime_girl_red.gif" class="bg-gif" />
+  </div>
+  <img src="rakunhub_logo_preview.png" class="logo" />
+  <h1 class="neon-text">Hoşgeldin oe</h1>
+  <form id="loginForm">
+    <input type="password" id="password" placeholder="Şifre" required />
+    <button type="submit">Giriş Yap</button>
+  </form>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const pass = document.getElementById("password").value;
+      if (pass === "rakunhub") window.location.href = "galeri.html";
+      else if (pass === "rakunadmin") window.location.href = "admin.html";
+      else alert("Şifre yanlış!");
+    });
+  </script>
+</body>
+</html>
